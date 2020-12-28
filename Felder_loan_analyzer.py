@@ -1,6 +1,10 @@
 # coding: utf-8
 import csv
 from pathlib import Path
+
+# For this first module challenge I have left all of the original comments in place 
+# I have added minimal comments where necessary
+
 print()
 print("Part 1:")
 """Part 1: Automate the Calculations.
@@ -84,6 +88,9 @@ print(f"Number of months remaining on the loan: {remaining_months}")
 # YOUR CODE HERE!
 
 Discount_Rate = 0.20
+
+#  Here I have defined and assigned a variable for discount rate with 20% for use in PV variable
+
 present_value = future_value / (1 + Discount_Rate/12) ** remaining_months
 
 # If Present Value represents what the loan is really worth, does it make sense to buy the loan at its cost?
@@ -127,6 +134,9 @@ new_loan = {
 def pv_calc(future_value,remaining_months,annual_discount_rate):
     present_value = future_value / (1+annual_discount_rate/12) ** remaining_months
     print(f"The present value of the the loan is: ${round(present_value,2)}")
+
+# I have created a function for calculating the PV of a loan per the parameters
+# the function also prints a statement as well as the value returned/assigned to the present value variable
 
 
 # @TODO: Use the function to calculate the present value of the new loan given below.
